@@ -1,0 +1,7 @@
+.cartCard {
+  display: flex;
+  flex-direction: row;
+  > img {
+    height: 40px;
+  }
+}

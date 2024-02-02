@@ -1,0 +1,41 @@
+.homeCategoryWindows {
+  display: flex;
+  justify-content: space-around;
+  img {
+    height: 40vw;
+  }
+}
+
+.subwindow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.homeLinks {
+  text-decoration: none;
+  padding: 20px;
+  font-size: 20px;
+
+  /* unvisited link */
+  &:link {
+    color: rgba(113, 72, 255);
+  }
+
+  /* visited link */
+  &:visited {
+    color: rgba(113, 72, 255);
+  }
+
+  /* mouse over link */
+  &:hover {
+    background: linear-gradient(rgba(39, 103, 255), rgba(197, 45, 255));
+    color: rgba(193, 229, 93);
+  }
+
+  /* selected link */
+  &:active {
+    background: linear-gradient(rgba(39, 103, 255), rgba(197, 45, 255));
+    color: rgba(193, 229, 93);
+  }
+}

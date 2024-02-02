@@ -1,0 +1,15 @@
+.search {
+  display: none;
+
+  &_show {
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+
+.searchImg {
+  display: block;
+}

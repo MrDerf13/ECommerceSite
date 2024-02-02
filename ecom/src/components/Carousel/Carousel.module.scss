@@ -1,0 +1,39 @@
+.carouselMain {
+  display: flex;
+  justify-content: space-around;
+  height: auto;
+  align-items: center;
+  width: 90%;
+}
+
+.carouselMidImg {
+  height: 50vh;
+  width: auto;
+  margin: auto;
+  @media (max-width: 1024px) {
+    height: 40vh;
+    width: auto;
+  }
+}
+
+.carouselSideImg {
+  width: 20vw;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.outerWrapper {
+  display: flex;
+  width: 95vw;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.arrow {
+  height: 20vh;
+  width: 5vw;
+}

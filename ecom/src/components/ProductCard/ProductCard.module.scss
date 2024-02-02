@@ -1,0 +1,64 @@
+.galleryCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  margin: 10px;
+  width: 45vw;
+  text-decoration: none;
+  color: black;
+
+  &:visited {
+    text-decoration: none;
+    color: black;
+  }
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.05);
+    background-color: pink;
+  }
+
+  @media (max-width: 768px) {
+    width: 90vw;
+    justify-content: center;
+    &:hover {
+      transition: none;
+      transform: none;
+    }
+  }
+
+  img {
+    width: 160px;
+    margin: 10px;
+  }
+}
+
+// .favContainer {
+//   display: flex;
+//   flex-direction: row;
+//   // align-items: center;
+
+//   justify-content: end;
+//   width: 90%;
+//   border: black solid 2px;
+// }
+
+// .star {
+//   visibility: hidden;
+//   font-size: 36px;
+//   color: gold;
+//   cursor: pointer;
+// }
+// .star:before {
+//   content: "\2606";
+//   position: absolute;
+//   visibility: visible;
+// }
+// .star:checked:before {
+//   content: "\2605";
+//   position: absolute;
+// }
+
+// <Redirect />
+// useNavigate

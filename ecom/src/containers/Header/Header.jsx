@@ -1,20 +1,16 @@
 import Nav from "../../components/Nav/Nav";
 import styles from "./Header.module.scss";
 import { NavLink } from "react-router-dom";
+import ModalSearch from "../../components/ModalSearch/ModalSearch";
 
 const Header = () => {
   return (
     <header className={styles.headerBar}>
       <Nav />
       {/* Search */}
-      <span>FRÉDÉRIQUÉ</span>
+      <span className={styles.title}>FRÉDÉRIQUÉ</span>
       <div className={styles.cartSearch}>
-        <input type="text" className={styles.search} />
-        <img
-          src="src/assets/search.png"
-          alt="search"
-          className={styles.searchImg}
-        />
+        <ModalSearch />
         <NavLink to="/cart">
           <img src="src/assets/cart.png" alt="cart" />
         </NavLink>
