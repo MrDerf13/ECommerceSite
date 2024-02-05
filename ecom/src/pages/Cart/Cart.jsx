@@ -27,6 +27,7 @@ const Cart = () => {
               }}
             />
           ))}
+      {/* <button></button> */}
     </div>
   );
 };

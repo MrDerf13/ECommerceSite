@@ -9,14 +9,7 @@ import {
 import styles from "./ProductPage.module.scss";
 import { RefreshContext } from "../../context/RefreshContextProvider";
 
-import { doc, onSnapshot } from "firebase/firestore";
-import { db } from "../../../config/firebase";
-
 const ProductPage = () => {
-  // Add to cart button
-  // Add to favourites
-  // Otherwise data from the product card
-
   const { id } = useParams();
   const formRef = useRef(null);
 
@@ -33,20 +26,13 @@ const ProductPage = () => {
   };
 
   useEffect(() => {
-    // getProductById(id, "productData").then((res) => {
-    //   setProduct(res);
-    // console.log(res);
-    // });
-    const unsub = onSnapshot(doc(db, "productData", id), (doc) => {
-      setProduct({ ...doc.data(), id: doc.id });
-      console.log("Current data: ", doc.data());
+    getProductById(id, "productData").then((res) => {
+      setProduct(res);
     });
-    return () => unsub();
-  }, []);
+  }, [id, refresh]);
 
   const handleFavourite = (e) => {
-    updateFavouriteProduct(id);
-    // setRefresh(!refresh);
+    updateFavouriteProduct(id).then((res) => setRefresh(!refresh));
   };
 
   return (
@@ -64,7 +50,13 @@ const ProductPage = () => {
             </button>
             <img src={product.image} alt={product.name} />
           </div>
-          <form onSubmit={handleSubmit} ref={formRef}>
+
+          <form
+            onSubmit={handleSubmit}
+            ref={formRef}
+            className={styles.formHalf}
+          >
+            <p>${product.price} per unit</p>
             <select id="size" name="size">
               <option value="l">Large</option>
               <option value="m">Medium</option>

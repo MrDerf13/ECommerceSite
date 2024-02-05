@@ -17,11 +17,6 @@ const Header = () => {
       </div>
     </header>
   );
-  // - Logo and Name
-  //     - Menu
-  //     - Search Bar
-  //     - Log In
-  //     - Cart Link
 };
 
 export default Header;

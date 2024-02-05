@@ -11,7 +11,7 @@ const CartCard = ({ obj, handleClick }) => {
         {obj.name} - {size.toUpperCase()}
       </h3>
       <p>Quantity: {cartQty}</p>
-      <p>Product total:{obj.price * cartQty}</p>
+      <p>Product total: ${obj.price * cartQty}</p>
       <img src="src/assets/delete.png" alt="delete" onClick={handleClick} />
     </article>
   );
