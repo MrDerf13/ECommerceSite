@@ -1,0 +1,18 @@
+.wholePage {
+  display: flex;
+}
+
+.halfPage {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
+  margin: 15px;
+  > button {
+    margin-bottom: 5px;
+    height: 6vh;
+  }
+}
+
+.formHalf {
+  margin-top: 20px;
+}

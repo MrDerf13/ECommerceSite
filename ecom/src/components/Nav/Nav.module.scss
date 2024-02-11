@@ -1,0 +1,47 @@
+.navBar {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  > a {
+    text-decoration: none;
+    padding: 5px;
+    font-size: 20px;
+  }
+}
+
+.navBarImg {
+  @media (min-width: 768px) {
+    display: none;
+  }
+  display: block;
+}
+
+.link {
+  /* unvisited link */
+  &:link {
+    color: rgba(113, 72, 255);
+  }
+
+  /* visited link */
+  &:visited {
+    color: rgba(113, 72, 255);
+  }
+
+  /* mouse over link */
+  &:hover {
+    background: linear-gradient(rgba(39, 103, 255), rgba(197, 45, 255));
+    color: rgba(193, 229, 93);
+  }
+}
+
+.active_link {
+  background: linear-gradient(rgba(197, 45, 255), rgba(39, 103, 255));
+  color: rgba(193, 229, 93);
+  &:visited {
+    color: rgba(193, 229, 93);
+  }
+}
